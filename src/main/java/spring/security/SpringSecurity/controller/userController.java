@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import spring.security.SpringSecurity.DTO.UserRequest;
-import spring.security.SpringSecurity.repo.UserRepository;
+import spring.security.SpringSecurity.repo.UserRequestRepo;
 
 @RestController
 public class userController {
 	
 	@Autowired
-	UserRepository userRepository;
+	UserRequestRepo userRepository;
 	
 	@GetMapping("/getUser")
 	public List<UserRequest> getuser()

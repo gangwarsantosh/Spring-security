@@ -13,7 +13,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 
 @Entity
-public class User implements UserDetails{
+public class Users {
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -24,21 +24,32 @@ public class User implements UserDetails{
 	 
 	 private String password;
 
-	 @Override
-	 public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
-	 }
-
-	 @Override
-	 public @Nullable String getPassword() {
-		// TODO Auto-generated method stub
-		return null;
-	 }
-
-	 @Override
 	 public String getUsername() {
-		// TODO Auto-generated method stub
-		return null;
+		 return username;
 	 }
+
+	 public void setUsername(String username) {
+		 this.username = username;
+	 }
+
+	 public String getPassword() {
+		 return password;
+	 }
+
+	 public void setPassword(String password) {
+		 this.password = password;
+	 }
+
+	 public Users(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+	 }
+
+	 public Users() {
+		super();
+		// TODO Auto-generated constructor stub
+	 }
+
+	
 }

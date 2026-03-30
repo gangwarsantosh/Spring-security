@@ -5,10 +5,12 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import spring.security.SpringSecurity.DTO.UserRequest;
+import spring.security.SpringSecurity.entity.Users;
+
+
 
 @Repository
-public interface UserRepository extends JpaRepository<UserRequest,Long>{
+public interface UserRepository extends JpaRepository<Users,Long>{
 	
-	Optional<UserRequest>   findByEmail(String email);
+	Optional<Users> findByUsername(String email);
 }
