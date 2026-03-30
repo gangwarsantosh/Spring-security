@@ -1,4 +1,4 @@
-package spring.security.SpringSecurity.student;
+package spring.security.SpringSecurity.DTO;
 
 public class Student {
 	

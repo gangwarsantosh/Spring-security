@@ -1,7 +1,6 @@
 package spring.security.SpringSecurity.service;
 
 
-import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -41,7 +40,7 @@ public class JwtService {
 		byte[] keyBytes= Decoders.BASE64.decode(secreteKey);
 		return Keys.hmacShaKeyFor(keyBytes);
 	}
-
+	//This is calling from the jwtFilter class
 	public String extractUsername(String token) {
 		// TODO Auto-generated method stub
 		return extractClaims(token,Claims::getSubject);
@@ -63,7 +62,7 @@ public class JwtService {
 				}
 
 	
-	
+	//This is calling from the jwtFilter class
 	public boolean validateToken(String token, UserDetails userDetails) {
 
 		final String username = extractUsername(token);

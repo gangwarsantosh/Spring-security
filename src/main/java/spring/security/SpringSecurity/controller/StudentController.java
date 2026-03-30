@@ -1,4 +1,4 @@
-package spring.security.SpringSecurity.student;
+package spring.security.SpringSecurity.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.servlet.http.HttpServletRequest;
+import spring.security.SpringSecurity.DTO.Student;
 import spring.security.SpringSecurity.entity.Users;
-import spring.security.SpringSecurity.service.JwtService;
 import spring.security.SpringSecurity.service.UserService;
 
 @RestController
